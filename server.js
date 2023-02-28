@@ -183,30 +183,6 @@ app.post('/resources', function (req, res) {
             console.log(req.session)
             console.log(`logging error ${err}`)
         })
-    // options = {
-    //     method: 'post',
-    //     url: url,
-    //     headers: {
-    //         "Authorization": "Basic " + encodeIdSecret(),
-    //         "Content-Type": "application/x-www-form-urlencoded"
-    //     },
-    //     data: {
-    //         grant_type: "authorization_code",
-    //         code: req.body["auth_code"],
-    //         redirect_uri: redirect_uri,
-    //         client_id: client_id,
-    //         code_verifier: req.session.codeVerifier
-    //     }
-    // }
-
-    // axios(options)
-    //     .then(data => {
-    //         if (!req.session.accessToken && !req.session.refreshToken) {
-    //             req.session.accessToken = data["access_token"]
-    //             req.session.refreshToken = data["refresh_token"]
-    //         }
-    //     })
-    //     .catch(err => console.log("SPOTIFY ERROR", err))
 })
 
 console.log('Listening on 8888');
